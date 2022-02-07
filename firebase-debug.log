@@ -23,3 +23,33 @@ Before we get started, keep in mind:
 
   * You are initializing within an existing Firebase project directory
 
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-02-07T15:51:01.680Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-02-07T15:51:02.394Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-02-07T15:51:02.395Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project my-cda21-biblio (my-cda21-biblio) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at C:\Users\dj_g_\Documents\Reactdir\CDA21-Front-debut 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=35052870&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-02-07T15:51:35.009Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"377fba55230954e74f82","redirect_uri":"http://localhost:9005","state":"35052870"}
+[debug] [2022-02-07T15:51:35.513Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Mon, 07 Feb 2022 15:51:34 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"1c1604ac91c89d5e4fa9bd834067576e\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.githubapp.com collector.github.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com collector.github.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/","x-github-request-id":"1E95:B798:1DFEAD:1F58EA:62014006"}
+[debug] [2022-02-07T15:51:35.519Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-02-07T15:51:35.985Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-02-07T15:51:35.986Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"phoenixburning","id":90852613,"node_id":"MDQ6VXNlcjkwODUyNjEz","avatar_url":"https://avatars.githubusercontent.com/u/90852613?v=4","gravatar_id":"","url":"https://api.github.com/users/phoenixburning","html_url":"https://github.com/phoenixburning","followers_url":"https://api.github.com/users/phoenixburning/followers","following_url":"https://api.github.com/users/phoenixburning/following{/other_user}","gists_url":"https://api.github.com/users/phoenixburning/gists{/gist_id}","starred_url":"https://api.github.com/users/phoenixburning/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/phoenixburning/subscriptions","organizations_url":"https://api.github.com/users/phoenixburning/orgs","repos_url":"https://api.github.com/users/phoenixburning/repos","events_url":"https://api.github.com/users/phoenixburning/events{/privacy}","received_events_url":"https://api.github.com/users/phoenixburning/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":0,"public_gists":0,"followers":0,"following":0,"created_at":"2021-09-16T14:40:19Z","updated_at":"2022-02-07T09:22:40Z","private_gists":0,"total_private_repos":10,"owned_private_repos":10,"disk_usage":6450,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as phoenixburning 
+[info] 
