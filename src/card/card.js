@@ -6,8 +6,23 @@ import './card.css'
 const Card = (props) => {
 
     const confirmDeleteHandler = () => {
+        try {
+            const response = fetch(
+                process.env.REACT_APP_BACKEND_URL + `/${props.route}/${props.oeuvre.id}`,
+                {
+                    method: "DELETE",
+                    headers: {
+                        "content-type": "application/json"
+                    }
+                }
+            )
+            if(response.ok){
+                props.onDelete(props.oeuvre.id)
+            }
+        } catch (error) {
+            console.log(error);
+        }
         alert("élément suprrimé")
-        console.log("élément suprrimé")
     }
 
     return (
@@ -24,7 +39,7 @@ const Card = (props) => {
             <div className="card-item__actions">
                 <ul>
                     <li>
-                        <button><NavLink to="/maj">Editer</NavLink></button>
+                        <button><NavLink to={`/${props.route}/${props.oeuvre.id}`}>Editer</NavLink></button>
                     </li>
                     <li>
                         <button onClick={confirmDeleteHandler}>Supprimer</button>

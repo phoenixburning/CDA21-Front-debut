@@ -6,7 +6,7 @@ const SearchBox = props => (
     <input 
         className="search-box"
         type="search"
-        placeholder="rechercher un titre"
+        placeholder={props.message}
         onChange={props.onSearch}
     />
 )

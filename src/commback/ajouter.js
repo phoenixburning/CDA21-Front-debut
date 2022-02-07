@@ -15,7 +15,6 @@ const Musiques = () => {
     //const [maRecherche, setMaRecherche] = useState("ma valeur par défaut")
 
     useEffect(() => {
-        console.log(process.env.REACT_APP_BACKEND_URL + '/musiques/');
         fetch(process.env.REACT_APP_BACKEND_URL + '/musiques/',
             {
                 methode: "GET",

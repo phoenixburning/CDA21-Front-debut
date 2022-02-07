@@ -2,9 +2,9 @@
     position: absolute;
     text-align: left;
     width: 40%;
-    height: 50%;
+    height: 55%;
     background-color: #FCC42C;
-    padding: 40px;
+    padding: 20px;
     top: 250px;
     left: 30%;
     border: solid;
@@ -23,8 +23,8 @@
 .label-tag {
   font-weight: bold;
   text-align: left;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 2px;
+  padding-top: 8px;
 }
 
 .input-tag {

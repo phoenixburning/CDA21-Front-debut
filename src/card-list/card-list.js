@@ -8,7 +8,7 @@ import Card from '../card/card'
 const CardList = (props) => (
         <div className="card-list">
             { props.oeuvres.map((o, i) => (
-                    <Card key={o.i} oeuvre={o} />
+                    <Card key={i} oeuvre={o} route={props.route} onDelete={props.onDeleteItem}/>
                     )
                 )
             }
